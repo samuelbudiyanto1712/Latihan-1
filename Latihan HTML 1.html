@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Layout dengan Table</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+
+        .layout {
+            width: 650px;
+            height: 450px;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .layout td {
+            border: 1px solid;
+            padding: 0;
+        }
+
+        header,
+        nav,
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        header {
+            height: 74px;
+            background-color: #ffe4c4;
+        }
+
+        nav {
+            height: 49px;
+            background-color: #d6e4f8;
+        }
+
+        main {
+            height: 274px;
+            padding: 42px 52px;
+            background-color: #f7cccc;
+        }
+
+        main h1 {
+            margin: 14px 0 20px;
+            font-size: 30px;
+        }
+
+        main p {
+            max-width: 330px;
+            margin: 0;
+            line-height: 1.15;
+        }
+
+        aside {
+            height: 274px;
+            padding: 76px 32px;
+            background-color: #d7e8d2;
+        }
+
+        aside h3 {
+            margin: 0 0 14px;
+            font-size: 16px;
+        }
+
+        aside ul {
+            margin: 0;
+            padding-left: 35px;
+        }
+
+        aside li {
+            margin: 4px 0;
+        }
+
+        footer {
+            height: 49px;
+            background-color: #ffe4c4;
+        }
+
+        .header-cell,
+        .footer-cell {
+            border-color: #e6a100 !important;
+        }
+
+        .nav-cell {
+            border-color: #659be0 !important;
+        }
+
+        .content-cell {
+            border-color: #ef6d63 !important;
+        }
+
+        .aside-cell {
+            border-color: #86b86b !important;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="layout">
+        <tr>
+            <td colspan="2" class="header-cell">
+                <header>HEADER</header>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="nav-cell">
+                <nav>NAVIGASI</nav>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="content-cell" style="width: 77%;">
+                <main>
+                    <h1>Heading 1</h1>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </main>
+            </td>
+
+            <td class="aside-cell" style="width: 23%;">
+                <aside>
+                    <h3>Menu:</h3>
+
+                    <ul>
+                        <li>Home</li>
+                        <li>Berita</li>
+                        <li>Layanan</li>
+                        <li>Kontak</li>
+                    </ul>
+                </aside>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="footer-cell">
+                <footer>FOOTER</footer>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
